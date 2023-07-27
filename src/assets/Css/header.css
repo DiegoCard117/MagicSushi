@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+
+:root {
+  --primary-color: #313640;
+  --small-padding: 15px;
+  --small-margin: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Cormorant', serif;
+}
+
+body {
+  background: var(--primary-color);
+}
+
+header {
+  background: var(--primary-color);
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+
+#logo {
+  list-style: none;
+  position: absolute;
+  left: -250%;
+  padding-top: var(--small-padding);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 100%;
+  margin: var(--small-margin);
+  padding: var(--small-padding);
+}
+
+.menu > li > img {
+  width: 50px;
+}
+
+.menu > li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.disable {
+  display: none;
+}
+
+.open {
+  display: block;
+}
+
+#cardapio {
+  z-index: 2;
+  position: relative;
+}
+
+.menu-dropdown {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  background-color: rgba(0, 0, 0, 0.342);
+  height: 300px;
+  width: 250px;
+  z-index: 1;
+}
+
+.options-cardapio {
+  position: absolute;
+  top: 50%;
+  padding-left: var(--small-padding);
+  transform: translateY(-54%);
+}
+
+.cardapio-dropdown > li{
+  list-style-type: none;
+  padding: var(--small-padding);
+  border-bottom: 1px solid ;
+  width: 100%;
+}
+
+.cardapio-dropdown > li:hover {
+  background-color: white;
+  color: var(--primary-color);
+  text-shadow: 0px 0px 10px var(--primary-color);
+}
